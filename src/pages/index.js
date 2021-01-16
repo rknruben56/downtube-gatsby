@@ -8,7 +8,6 @@ import ProgressBar from "../components/progress-bar"
 export default function Home() {
   const initialTime = Date.now();
   const interval = 1000;
-  const waitTime = 150000;
   const [progress, setProgress] = useState(0);
   const [isFormDisabled, setIsFormDisabled] = useState(false);
 
@@ -21,7 +20,7 @@ export default function Home() {
   // Because the mp3 takes awhile to upload to s3, need to set a fake
   // progress bar to returned the signed url
   const updateProgress = (url) => {
-    const status = Math.min(1, (Date.now() - initialTime) / waitTime);
+    const status = Math.min(1, (Date.now() - initialTime) / process.env.GATSBY_WAIT_TIME);
     if (status !== 1) {
       setProgress(status * 100);
       setTimeout(function() { updateProgress(url) }, interval);
