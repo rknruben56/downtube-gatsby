@@ -11,8 +11,7 @@ export default function Instructions() {
         <li>Copy the URL</li>
         <li>Paste the URL in the text box (right click works!)</li>
         <li>Click download</li>
-        <li>Wait for it to finish converting to an mp3</li>
-        <li>You should get a popup saying if you want to save it. If not, it's in your Downloads folder</li>
+        <li>It'll open up a new window and start downloading. Should be in your downloads folder when done</li>
         <li>If you click on the mp3 file, it should automatically add to iTunes</li>
         <li>Enjoy! Love, Junior</li>
       </ul>
